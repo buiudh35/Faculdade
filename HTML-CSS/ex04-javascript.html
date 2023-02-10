@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício Javascript
+    </title>
+</head>
+<body>
+    <div id="exibe_resultado"> Resultado da operação matemática: </div>
+</body>
+<script>
+    var numero1  = prompt("Insira o primeiro número: ");
+    var operacao = prompt("Escolha o tipo de operação matemática: ")
+    var numero2  = prompt("Insira o segundo número: ");
+    
+    var resultado = 0;
+
+    if (operacao == '+')
+        resultado = soma(numero1, numero2);
+
+    if (operacao == '-')
+        resultado = diminui(numero1, numero2);
+
+    if (operacao == '*')
+        resultado = multiplica(numero1, numero2);
+
+    if (operacao == '/')
+        resultado = divide(numero1, numero2);
+
+    alert('O resultado é: ' + resultado);
+
+    function soma(numero1, numero2){
+        return parseInt(numero1) + parseInt(numero2)
+    }
+
+    function diminui(numero1, numero2){
+        return parseInt(numero1) - parseInt(numero2)
+    }
+
+    function multiplica(numero1, numero2){
+        return parseInt(numero1) * parseInt(numero2)
+    }
+
+    function divide(numero1, numero2){
+        return parseInt(numero1) / parseInt(numero2)
+    }
+
+    var divLocal = document.getElementById('exibe_resultado');
+    divLocal.innerHTML += resultado;
+
+</script>
+</html>
